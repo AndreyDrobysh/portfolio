@@ -1,25 +1,25 @@
 import BaseComponent from '../components/BaseComponent/BaseComponent';
-// import Footer from '../Footer/Footer';
-// import Header from '../Header/Header';
-// import Main from '../Pages/Main/Main';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
+import Main from '../Main/Main';
 
 export default class App extends BaseComponent {
-  // private header: Header;
+  private header: Header;
 
-  // private footer: Footer;
+  private main: Main;
 
-  // private main: Main;
+  private footer: Footer;
 
   constructor() {
     super('div', ['app']);
-    // this.header = new Header();
-    // this.footer = new Footer();
-    // this.main = new Main();
+    this.header = new Header();
+    this.main = new Main();
+    this.footer = new Footer();
   }
 
-  // start(): void {
-  //   this.addChild(this.header);
-  //   this.addChild(this.main);
-  //   this.addChild(this.footer);
-  // }
+  start(): void {
+    this.addChild(this.header);
+    this.addChild(this.main);
+    this.addChild(this.footer);
+  }
 }
